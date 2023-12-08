@@ -18,6 +18,7 @@ class state:
             return [self.board] # Trả về bảng của trạng thái hiện tại
         return (self.state_parent).get_line() + [self.board] # Tạo ra một danh sách các bảng từ trạng thái ban đầu đến trạng thái hiện tại.
     'Tính toán hàm ước lượng được sử dụng cho thuật toán A*'
+    'Hàm tính toán khoảng cách từ tất cả box hiện tại đến tất cả checkpoint trên map'
     def compute_heuristic(self):
         list_boxes = TimVTHop(self.board)
         if self.heuristic == 0:
